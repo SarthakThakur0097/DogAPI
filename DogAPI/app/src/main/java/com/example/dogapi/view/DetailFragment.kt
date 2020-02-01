@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import com.example.dogapi.R
-import kotlinx.android.synthetic.main.fragment_detail.*
 
 /**
  * A simple [Fragment] subclass.
@@ -32,13 +30,6 @@ class DetailFragment : Fragment() {
         //If argument is not null run this bit of code
         arguments?.let {
             dogUuid = DetailFragmentArgs.fromBundle(it).dogUuid
-            textView2.text = dogUuid.toString()
         }
-
-            buttonList.setOnClickListener {
-                val action = DetailFragmentDirections.actionListFragment()
-                Navigation.findNavController(it).navigate(action)
-            }
     }
-
 }
